@@ -10,10 +10,15 @@ class MultiThreadView extends MultiThreadViewModel {
           changeLoading();
         },
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(count.toString()),
+      ),
       body: Column(
         children: [
-          isLoading ? const CircularProgressIndicator() : const SizedBox()
+          Center(
+              child: isLoading
+                  ? const CircularProgressIndicator()
+                  : const SizedBox())
         ],
       ),
     );
