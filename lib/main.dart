@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_thread_isolate/multi_thread/multi_thread.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ThreadIsolateApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+class ThreadIsolateApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MultiThread(),
+    );
   }
 }
